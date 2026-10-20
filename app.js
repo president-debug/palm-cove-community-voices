@@ -20,7 +20,7 @@
     quoteBox.classList.add('hiding');
     setTimeout(()=>{index=(nextIndex+items.length)%items.length;announce();quoteBox.classList.remove('hiding');resetProgress()},420);
   }
-  function schedule(){clearInterval(timer);if(playing)timer=setInterval(()=>show(index+1),3000);resetProgress()}
+  function schedule(){clearInterval(timer);if(playing)timer=setInterval(()=>show(index+1),5000);resetProgress()}
   document.querySelector('#next').addEventListener('click',()=>{show(index+1);schedule()});
   document.querySelector('#prev').addEventListener('click',()=>{show(index-1);schedule()});
   pause.addEventListener('click',()=>{playing=!playing;pause.textContent=playing?'Pause':'Play';pause.setAttribute('aria-label',playing?'Pause quote rotation':'Resume quote rotation');schedule()});
