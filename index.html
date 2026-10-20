@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>What Palm Cove Told Us</title>
+
+<style>
+
+:root{
+    --sea:#135d69;
+    --palm:#25463c;
+    --sand:#f8f4eb;
+    --light:#ffffff;
+    --accent:#d8b56a;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    background:linear-gradient(
+        180deg,
+        #faf7f1 0%,
+        #f5f1e8 100%
+    );
+    font-family:Georgia,serif;
+    color:var(--palm);
+}
+
+.hero{
+
+    padding:70px 25px 40px;
+    text-align:center;
+}
+
+.hero h1{
+    margin:0;
+    color:var(--sea);
+    font-size:3.2rem;
+    font-weight:normal;
+}
+
+.hero p{
+    max-width:800px;
+    margin:20px auto;
+    line-height:1.8;
+    font-family:Arial,sans-serif;
+    color:#666;
+}
+
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:35px;
+}
+
+.stat{
+
+    background:white;
+    border-radius:16px;
+    padding:20px 30px;
+    min-width:240px;
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,.08);
+}
+
+.stat-number{
+    font-size:2.5rem;
+    color:var(--sea);
+    font-weight:bold;
+}
+
+.stat-label{
+    font-family:Arial,sans-serif;
+    color:#777;
+    margin-top:5px;
+}
+
+.section{
+    max-width:1200px;
+    margin:auto;
+    padding:25px;
+}
+
+.section-title{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+
+    text-transform:uppercase;
+    letter-spacing:3px;
+
+    color:#666;
+
+    font-family:Arial,sans-serif;
+
+    margin-bottom:25px;
+}
+
+.quote-wall{
+
+    background:white;
+
+    border-radius:28px;
+
+    padding:50px;
+
+    min-height:340px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.08);
+}
+
+.quote{
+    opacity:0;
+    transition:opacity 2s ease;
+}
+
+.quote.active{
+    opacity:1;
+}
+
+.quote-text{
+    font-size:2rem;
+    line-height:1.6;
+    text-align:center;
+}
+
+.quote-footer{
+
+    text-align:center;
+
+    margin-top:35px;
+
+    font-family:Arial,sans-serif;
+    color:#888;
+    font-size:.9rem;
+    letter-spacing:2px;
+}
+
+.story-panels{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+
+    margin-top:50px;
+}
+
+.panel{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,.06);
+}
+
+.panel h3{
+    margin-top:0;
+    color:var(--sea);
+}
+
+.panel p{
+    font-family:Arial,sans-serif;
+    line-height:1.7;
+    color:#666;
+}
+
+.callout{
+
+    margin-top:50px;
+
+    background:var(--sea);
+
+    color:white;
+
+    border-radius:24px;
+
+    text-align:center;
+
+    padding:60px 40px;
+}
+
+.callout-quote{
+
+    font-size:2.4rem;
+    line-height:1.5;
+}
+
+.callout-source{
+
+    margin-top:25px;
+
+    text-transform:uppercase;
+    letter-spacing:2px;
+
+    opacity:.8;
+
+    font-family:Arial,sans-serif;
+}
+
+.footer{
+
+    text-align:center;
+
+    padding:50px 20px;
+
+    color:#777;
+
+    font-family:Arial,sans-serif;
+
+    font-size:.9rem;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.2rem;
+}
+
+.quote-wall{
+    padding:30px;
+}
+
+.quote-text{
+    font-size:1.4rem;
+}
+
+.callout-quote{
+    font-size:1.6rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<h1>What Palm Cove Told Us</h1>
+
+<p>
+Community responses consistently highlighted walkability,
+village character, pedestrian safety,
+reduced traffic pressure and protection of the beachfront experience.
+</p>
+
+<div class="stats">
+
+<div class="stat">
+<div class="stat-number">157</div>
+<div class="stat-label">
+Walkability-related responses
+</div>
+</div>
+
+<div class="stat">
+<div class="stat-number">421</div>
+<div class="stat-label">
+Survey responses
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="section-title">
+<span id="category">
+Walkability
+</span>
+</div>
+
+<div class="quote-wall">
+
+<div id="quote" class="quote active">
+
+<div id="quoteText" class="quote-text"></div>
+
+<div class="quote-footer">
+Palm Cove Community Survey
+</div>
+
+</div>
+
+</div>
+
+<div class="story-panels">
+
+<div class="panel">
+<h3>Walkability</h3>
+<p>
+Residents repeatedly identified walking,
+footpaths, boardwalks, accessibility,
+cycle connections and pedestrian comfort
+as key elements of Palm Cove's identity.
+</p>
+</div>
+
+<div class="panel">
+<h3>Village Character</h3>
+<p>
+Responses consistently valued a calm,
+low-rise village atmosphere,
+natural beauty,
+shade trees and a relaxed pace of life.
+</p>
+</div>
+
+<div class="panel">
+<h3>Traffic & Parking</h3>
+<p>
+Many responses linked reducing traffic,
+relocating parking,
+and improving the pedestrian environment
+to protecting Palm Cove's future.
+</p>
+</div>
+
+</div>
+
+<div class="callout">
+
+<div id="featuredQuote" class="callout-quote">
+“The walkability”
+</div>
+
+<div class="callout-source">
+Community Voice
+</div>
+
+</div>
+
+</section>
+
+<div class="footer">
+
+Community quotations displayed as submitted through the
+Palm Cove community survey.
+
+</div>
+
+<script>
+
+const categories = [
+
+{
+title:"Walkability",
+quotes:[
+"The walkability",
+"Walk ability",
+"The ability to be able to walk to everything and the village feel",
+"The beautiful trees and walkways",
+"Walking paths, trees",
+"Walking spaces",
+"The easy nature of walking around at any time of day/night",
+"Safe walking",
+"The safety of walking along the beach front in the evenings",
+"The feeling you can totally relax and can walk anywhere without having to drive",
+"The main walking path. Views from cafes and restaurants along the esplanade",
+"The path along the beach palm tree fringed",
+"The stunning boardwalk on the beach side",
+"The easy pedestrian access and the foreshore natural beauty"
+]
+},
+{
+title:"Village Character",
+quotes:[
+"Village character",
+"The tropical vibe and small tourist coastal town feel",
+"The slow pace and village feel",
+"The small-town feel of the esplanade",
+"The relaxed lifestyle",
+"Peace and quiet",
+"The peaceful atmosphere",
+"The village atmosphere, palms and melaleuca trees",
+"The unique charm of Palm Cove",
+"The tropical greenery and views which help create the laid back tropical vibe"
+]
+},
+{
+title:"Traffic & Parking",
+quotes:[
+"Pedestrian only",
+"Restrict private vehicle access to front",
+"Move parking away from the beach front",
+"Minimise traffic on the beachfront",
+"Less traffic along the foreshore",
+"Remove parking and traffic congestion",
+"Pedestrian only access to part of Williams Esplanade",
+"Safer pedestrian and biking walkways",
+"Increase footpaths and reduce parking space"
+]
+}
+
+];
+
+let category = 0;
+let quote = 0;
+
+const quoteText =
+document.getElementById("quoteText");
+
+const quoteBlock =
+document.getElementById("quote");
+
+const heading =
+document.getElementById("category");
+
+const featured =
+document.getElementById("featuredQuote");
+
+function rotateQuote(){
+
+quoteBlock.classList.remove("active");
+
+setTimeout(()=>{
+
+const current =
+categories[category];
+
+heading.innerText =
+current.title;
+
+quoteText.innerHTML =
+"“" + current.quotes[quote] + "”";
+
+featured.innerHTML =
+"“" + current.quotes[quote] + "”";
+
+quoteBlock.classList.add("active");
+
+quote++;
+
+if(quote >= current.quotes.length){
+
+quote=0;
+
+category++;
+
+if(category >= categories.length){
+
+category=0;
+
+}
+
+}
+
+},1000);
+
+}
+
+rotateQuote();
+
+setInterval(
+rotateQuote,
+9000
+);
+
+</script>
+
+</body>
+</html>
